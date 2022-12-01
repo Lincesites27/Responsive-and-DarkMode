@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    transition: 0.5s;
+}
+.dark{
+    background-color: #000;
+    transition: 0.5s;
+}
+
+.container{
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.header{
+    padding-top: 25px;
+    padding-bottom: 24px;
+    width: 100%;
+    display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border-bottom: 1px solid #000;
+}
+.dark .header{
+    border-bottom: 1px solid #FFF;
+    color: #fff;
+}
+
+.nav ul{
+    display: flex;
+    list-style: none;
+}
+.nav ul li{
+   margin-left: 15px;
+}
+ul li{
+    cursor: pointer;
+}
+
+.btns{
+    cursor: pointer;
+}
+.section-duplo{
+    padding: 48px 0 48px 0;
+    display: flex;
+    align-items: center;
+}
+
+.esquerdo{
+    width: 50%;
+    padding-right: 20px;
+}
+.esquerdo h2{
+    padding-bottom: 16px;
+}
+
+.dark .esquerdo {
+    color: #FFF;
+}
+
+.direito{
+    width: 50%;
+}
+.direito img{
+    width: 100%;
+    
+}
+
+.sol{
+    display: none;
+}
+.dark .sol{
+    display: flex;
+}
+.dark .lua{
+    display: none;
+}
+
+.menu-toogle{
+    cursor: pointer;
+    display: none;
+}
+
+.nav-mobile{
+    display: none; 
+    position: absolute;
+}
+
+@media (max-width:500px){
+    .nav{
+        display: none;
+    }
+    .menu-toogle{
+        display: flex;
+    }
+    .section-duplo{
+        flex-direction: column;
+    }
+    .esquerdo{
+        width: 100%;
+    }
+    .direito{
+        padding-top: 48px;
+        width: 100%;
+    }
+    .nav-mobile.open{
+        transition: 0.5s;
+        display: flex;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 80px;
+        background-color: #000;
+        color: #FFF;
+    }
+    .dark .nav-mobile.open{
+        transition: 0.5s;
+        background-color: #fff;
+        color: #000;
+    }
+    .dark .nav-mobile.open ul li{
+        padding-top: 8px;
+        border-bottom: 1px solid #fff;
+    }
+    .dark .nav-mobile.open ul li:hover{
+        border-bottom: 1px solid #000;
+    }
+
+    .nav-mobile.open ul{
+        list-style: none;
+        padding: 20px;
+    }
+    .nav-mobile.open ul li{
+        padding-top: 8px;
+        border-bottom: 1px solid #000;
+    }
+    .nav-mobile.open ul li:hover{
+        border-bottom: 1px solid #fff;
+    }
+}
